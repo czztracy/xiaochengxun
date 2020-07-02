@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <czz-component id="the-id" prop-a="{{ dataFieldA }}" prop-b="{{ dataFieldB }}" bind:myevent="myEventListener">
+    <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
+    <view slot="before">name="before"中的内容</view>
+    <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
+    <view slot="after">name="after"中的内容</view>
+    <view bindtap="getUserInfo">{{ motto }}</view>
+    <view bindtap="sharedMethod">公用数据：{{ sharedText }}</view>
+    <view wx:for="{{ List }}" wx:key="index">{{ item }} {{ index }}</view>
+    <view wx:for="{{ arr }}" wx:for-index="id" wx:key="id" wx:for-item="itemName">
+      {{ id }}: {{ itemName.label }}
+    </view>
+    <switch wx:for="{{ numberArray }}" wx:key="*this" style="display: block;"> {{item}} </switch>
+    <view wx:if="{{ numberArray.length > 5 }}">5</view>
+    <view wx:elif="{{ numberArray.length > 1 }}">2</view>
+    <view wx:else>1</view>
+    <block wx:if="{{ numberArray.length > 1 }}">
+      <view>VUE</view>
+      <view>REACT</view>
+      <view>ANGULER</view>
+    </block>
+  </czz-component>
+</view>

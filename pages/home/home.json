@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#00f",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "czz-component": "/components/componentTagName/component-tag-name"
+  }
+}

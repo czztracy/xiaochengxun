@@ -1,0 +1,7 @@
+<!--components/componentTagName/component-tag-name.js.wxml-->
+<view>
+  <slot name="before"></slot>
+  <view data-hi="WeChat" bindtap="onTap">{{ msg }}</view>
+  <slot name="after"></slot>
+  <slot></slot>
+</view>
